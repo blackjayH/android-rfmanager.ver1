@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.hong.listcomplete.MainActivity">
+
+
+    <TabHost
+        android:id="@+id/tabhost1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/toolBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/colorPrimary"
+                        android:minHeight="?attr/actionBarSize">
+
+                        <EditText
+                            android:id="@+id/searchinput"
+                            android:layout_width="275dp"
+                            android:layout_height="40dp"
+                            android:hint=" +add search" />
+
+                        <Button
+                            android:id="@+id/searchbutton"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:text="검색" />
+                    </android.support.v7.widget.Toolbar>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/productmenu"
+                            android:layout_width="250dp"
+                            android:layout_height="40dp"
+                            android:text="장보기 리스트"
+                            android:textSize="20dp" />
+
+
+                        <Button
+                            android:id="@+id/findproduct"
+                            android:layout_width="160dp"
+                            android:layout_height="40dp"
+                            android:text="백업리스트 확인하기" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <EditText
+                            android:id="@+id/inputproduct"
+                            android:layout_width="235dp"
+                            android:layout_height="40dp"
+                            android:hint=" +add a new product name" />
+
+                        <Button
+                            android:id="@+id/enrollproduct"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:text="담기" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:padding="10dp">
+
+
+                        <TextView
+                            android:id="@+id/all"
+                            android:layout_width="235dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="20dp"
+                            android:textSize="20dp" />
+
+                        <CheckBox
+                            android:id="@+id/allcheckBox"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="false" />
+
+                        <Button
+                            android:id="@+id/deleteproduct"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:text="삭제" />
+
+                        <Button
+                            android:id="@+id/backup"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:text="복원" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:choiceMode="multipleChoice" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/toolBar2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/colorPrimary"
+                        android:minHeight="?attr/actionBarSize">
+                        <EditText
+                            android:id="@+id/editrecipe"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:hint=" +add product recipe" />
+                        <Button
+                            android:id="@+id/btn_recipe"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:text="레시피 검색" />
+
+                        <Button
+                            android:id="@+id/btn_delete"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:text="삭제" />
+                    </android.support.v7.widget.Toolbar>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/result"
+                            android:layout_width="235dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp" />
+
+                        <Button
+                            android:id="@+id/input"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="등록하러가기" />
+
+                        <Button
+                            android:id="@+id/enrolllist"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="장바구니 넣기" />
+
+                        <Button
+                            android:id="@+id/recipescan"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="레시피검색 선택" />
+
+                    </LinearLayout>
+
+
+                    <GridView
+                        android:id="@+id/gridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:numColumns="2"></GridView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/inputgood2"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="#daffc0"
+                        android:ems="10"
+                        android:text="+add a new product" />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </TabHost>
+
+
+</LinearLayout>
