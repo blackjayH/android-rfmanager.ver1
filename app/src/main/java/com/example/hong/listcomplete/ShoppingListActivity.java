@@ -214,7 +214,7 @@ public class ShoppingListActivity extends AppCompatActivity {
                 for (BuyProduct bp : templist)
                     tempadapter.add(bp);
                 listView.setAdapter(tempadapter);
-                InputMethodManager mInputMethodManager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                InputMethodManager mInputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 mInputMethodManager.hideSoftInputFromWindow(searchinput.getWindowToken(), 0);
 
             }

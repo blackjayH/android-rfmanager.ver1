@@ -55,7 +55,7 @@
 
     <TextView
         android:id="@+id/date3"
-        android:layout_width="250dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="달력에서 유통기한을 선택해주세요" />
 
@@ -65,7 +65,7 @@
 
         <CalendarView
             android:id="@+id/calendarView"
-            android:layout_width="250dp"
+            android:layout_width="335dp"
             android:layout_height="300dp"
             android:maxDate="12/31/2099"
             android:minDate="04/01/2013" />
